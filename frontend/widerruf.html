@@ -1,0 +1,427 @@
+<!-- Widerrufsbelehrung des MusterShops -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Widerrufsbelehrung | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">Konto</a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">Administration</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">Mein Konto</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">Abmelden</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Widerrufsbelehrung -->
+    <main class="legal-page section-p1">
+
+        <div class="legal-container">
+
+            <div class="legal-header">
+
+                <span class="legal-label">
+                    Rechtliche Informationen
+                </span>
+
+                <h1>
+                    Widerrufsbelehrung
+                </h1>
+
+                <p>
+                    Informationen zur Ausübung des Widerrufsrechts
+                </p>
+
+            </div>
+
+
+            <!-- Widerrufsrecht -->
+            <section class="legal-section">
+
+                <h2>Widerrufsrecht</h2>
+
+                <!-- KONFIGURATION: Widerrufsfrist und Voraussetzungen vor einer realen Inbetriebnahme auf das tatsächliche Warenangebot und die geltenden rechtlichen Anforderungen prüfen -->
+                <p>
+                    Verbraucher haben das Recht, binnen vierzehn Tagen
+                    ohne Angabe von Gründen diesen Vertrag zu widerrufen.
+                </p>
+
+                <!-- KONFIGURATION: Beginn und Dauer der Widerrufsfrist vor einer realen Inbetriebnahme rechtlich prüfen und bei abweichendem Angebot anpassen -->
+                <p>
+                    Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag,
+                    an dem du oder ein von dir benannter Dritter, der nicht
+                    der Beförderer ist, die Ware in Besitz genommen hast
+                    bzw. hat.
+                </p>
+
+                <!-- KONFIGURATION: Zulässige Wege für die Widerrufserklärung an den tatsächlichen Geschäftsprozess anpassen -->
+                <p>
+                    Um dein Widerrufsrecht auszuüben, musst du uns mittels
+                    einer eindeutigen Erklärung über deinen Entschluss,
+                    diesen Vertrag zu widerrufen, informieren.
+                </p>
+
+
+                <div class="legal-placeholder">
+
+                    <!-- KONFIGURATION: Vollständigen Firmennamen des tatsächlichen Vertragspartners eintragen -->
+                    <strong>Muster GmbH</strong>
+
+                    <!-- KONFIGURATION: Geschäftsanschrift für Widerrufserklärungen eintragen -->
+                    <span>
+                        Musterstraße 12
+                    </span>
+
+                    <span>
+                        66111 Saarbrücken
+                    </span>
+
+                    <!-- KONFIGURATION: Land der Geschäftsanschrift eintragen -->
+                    <span>
+                        Deutschland
+                    </span>
+
+                    <!-- KONFIGURATION: E-Mail-Adresse für Widerrufserklärungen eintragen -->
+                    <span>
+                        E-Mail: shop@muster.de
+                    </span>
+
+                    <!-- KONFIGURATION: Geschäftliche Telefonnummer eintragen -->
+                    <span>
+                        Telefon: +49 123 12345
+                    </span>
+
+                </div>
+
+
+                <!-- KONFIGURATION: Hinweis nur verwenden, solange der Shop tatsächlich das elektronische Widerrufsformular unter widerrufen.html anbietet -->
+                <p>
+                    Du kannst deinen Widerruf auch über unser
+                    elektronisches Widerrufsformular übermitteln.
+                </p>
+
+                <!-- KONFIGURATION: Regelung zur Wahrung der Widerrufsfrist vor einer realen Inbetriebnahme rechtlich prüfen -->
+                <p>
+                    Zur Wahrung der Widerrufsfrist reicht es aus, dass du
+                    die Mitteilung über die Ausübung des Widerrufsrechts
+                    vor Ablauf der Widerrufsfrist absendest.
+                </p>
+
+            </section>
+
+
+            <!-- Folgen des Widerrufs -->
+            <section class="legal-section">
+
+                <h2>Folgen des Widerrufs</h2>
+
+                <!-- KONFIGURATION: Rückzahlungsfrist und Umgang mit Lieferkosten vor einer realen Inbetriebnahme auf die geltenden rechtlichen Anforderungen und den tatsächlichen Versandprozess prüfen -->
+                <p>
+                    Wenn du diesen Vertrag widerrufst, haben wir dir alle
+                    Zahlungen, die wir von dir erhalten haben, einschließlich
+                    der Lieferkosten, unverzüglich und spätestens binnen
+                    vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die
+                    Mitteilung über deinen Widerruf bei uns eingegangen ist.
+                </p>
+
+                <!-- KONFIGURATION: Rückzahlungsweg an die tatsächlich angebotenen Zahlungsmethoden und den Rückerstattungsprozess anpassen -->
+                <p>
+                    Für diese Rückzahlung verwenden wir grundsätzlich
+                    dasselbe Zahlungsmittel, das du bei der ursprünglichen
+                    Transaktion eingesetzt hast, sofern nicht ausdrücklich
+                    etwas anderes vereinbart wurde.
+                </p>
+
+                <p>
+                    Dir werden wegen dieser Rückzahlung keine Entgelte
+                    berechnet.
+                </p>
+
+                <!-- KONFIGURATION: Voraussetzungen für die Rückzahlung vor einer realen Inbetriebnahme rechtlich und organisatorisch prüfen -->
+                <p>
+                    Wir können die Rückzahlung verweigern, bis wir die Waren
+                    wieder zurückerhalten haben oder bis du den Nachweis
+                    erbracht hast, dass du die Waren zurückgesandt hast,
+                    je nachdem, welches der frühere Zeitpunkt ist.
+                </p>
+
+            </section>
+
+
+            <!-- Rücksendung -->
+            <section class="legal-section">
+
+                <h2>Rücksendung der Ware</h2>
+
+                <!-- KONFIGURATION: Rücksendefrist vor einer realen Inbetriebnahme auf die geltenden rechtlichen Anforderungen prüfen -->
+                <p>
+                    Du hast die Waren unverzüglich und in jedem Fall
+                    spätestens binnen vierzehn Tagen ab dem Tag, an dem
+                    du uns über den Widerruf dieses Vertrags unterrichtet
+                    hast, an uns zurückzusenden oder zu übergeben.
+                </p>
+
+                <p>
+                    Die Frist ist gewahrt, wenn du die Waren vor Ablauf
+                    der Frist von vierzehn Tagen absendest.
+                </p>
+
+
+                <div class="legal-placeholder">
+
+                    <strong>Rücksendeadresse</strong>
+
+                    <!-- KONFIGURATION: Firmenname und tatsächliche Rücksendeadresse vor Inbetriebnahme eintragen -->
+                    <span>
+                        Muster GmbH
+                    </span>
+
+                    <span>
+                        Musterstraße 12
+                    </span>
+
+                    <span>
+                        66111 Saarbrücken
+                    </span>
+
+                    <span>
+                        Deutschland
+                    </span>
+
+                </div>
+
+
+                <!-- KONFIGURATION: Regelung zu den Rücksendekosten an den tatsächlichen Rückgabeprozess anpassen und vor realer Inbetriebnahme rechtlich prüfen -->
+                <p>
+                    Du trägst die unmittelbaren Kosten der Rücksendung
+                    der Waren.
+                </p>
+
+                <!-- KONFIGURATION: Regelung zum möglichen Wertverlust vor einer realen Inbetriebnahme rechtlich prüfen -->
+                <p>
+                    Du musst für einen etwaigen Wertverlust der Waren nur
+                    aufkommen, wenn dieser Wertverlust auf einen zur Prüfung
+                    der Beschaffenheit, Eigenschaften und Funktionsweise der
+                    Waren nicht notwendigen Umgang mit ihnen zurückzuführen
+                    ist.
+                </p>
+
+            </section>
+
+
+            <!-- Vertrag widerrufen -->
+            <section class="legal-section">
+
+                <h2>Vertrag widerrufen</h2>
+
+                <!-- KONFIGURATION: Beschreibung nur verwenden, solange das elektronische Widerrufsformular tatsächlich angeboten wird -->
+                <p>
+                    Wenn du deinen Vertrag widerrufen möchtest, kannst du
+                    deinen Widerruf direkt über unser elektronisches
+                    Widerrufsformular übermitteln.
+                </p>
+
+                <!-- KONFIGURATION: Bestätigungsprozess mit withdrawals.js und dem Mailversand abstimmen -->
+                <p>
+                    Nach erfolgreicher Übermittlung erhältst du eine
+                    Bestätigung über den Eingang deiner Widerrufserklärung.
+                </p>
+
+                <a
+                    href="widerrufen.html"
+                    class="legal-contact-link"
+                >
+                    Vertrag elektronisch widerrufen
+                </a>
+
+            </section>
+
+
+            <!-- Zurück -->
+            <div class="legal-back">
+
+                <a href="javascript:history.back()">
+                    ← Zurück
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

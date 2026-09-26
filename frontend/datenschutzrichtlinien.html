@@ -1,0 +1,811 @@
+<!-- Datenschutzerklärung des E-Shops -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Datenschutzerklärung | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">Konto</a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">
+                                Administration
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">
+                                Mein Konto
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">
+                                Abmelden
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Datenschutzerklärung -->
+    <main class="legal-page section-p1">
+
+        <div class="legal-container">
+
+            <div class="legal-header">
+
+                <span class="legal-label">
+                    Rechtliche Informationen
+                </span>
+
+                <h1>
+                    Datenschutzerklärung
+                </h1>
+
+                <!-- KONFIGURATION: Shopname an den tatsächlichen Namen des Shops anpassen -->
+                <p>
+                    Informationen zur Verarbeitung personenbezogener Daten
+                    im MusterShop
+                </p>
+
+            </div>
+
+
+            <!-- Verantwortlicher -->
+            <section class="legal-section">
+
+                <h2>1. Verantwortlicher</h2>
+
+                <p>
+                    Verantwortlicher für die Verarbeitung personenbezogener
+                    Daten im Rahmen dieses Online-Shops ist:
+                </p>
+
+                <div class="legal-placeholder">
+
+                    <!-- KONFIGURATION: Vollständigen Firmennamen des Verantwortlichen eintragen -->
+                    <strong>
+                        Muster GmbH
+                    </strong>
+
+                    <!-- KONFIGURATION: Geschäftsanschrift des Verantwortlichen eintragen -->
+                    <span>
+                        Musterstraße 12
+                    </span>
+
+                    <span>
+                        66111 Saarbrücken
+                    </span>
+
+                    <!-- KONFIGURATION: Land des Unternehmenssitzes eintragen -->
+                    <span>
+                        Deutschland
+                    </span>
+
+                    <!-- KONFIGURATION: Vertretungsberechtigte Geschäftsführung eintragen -->
+                    <span>
+                        Geschäftsführer: Max Mustermann
+                    </span>
+
+                    <!-- KONFIGURATION: Datenschutz-/Kontakt-E-Mail-Adresse des Verantwortlichen eintragen -->
+                    <span>
+                        E-Mail: shop@muster.de
+                    </span>
+
+                    <!-- KONFIGURATION: Geschäftliche Telefonnummer eintragen -->
+                    <span>
+                        Telefon: +49 123 12345
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Benutzerkonto -->
+            <section class="legal-section">
+
+                <h2>2. Benutzerkonto und Registrierung</h2>
+
+                <!-- KONFIGURATION: Beschreibung der Registrierung bei Änderungen an den tatsächlich erhobenen Registrierungsdaten anpassen -->
+                <p>
+                    Zur Nutzung bestimmter Funktionen des Online-Shops
+                    kann ein Benutzerkonto erstellt werden.
+                </p>
+
+                <p>
+                    Im Rahmen der Registrierung werden insbesondere
+                    Benutzername, E-Mail-Adresse und Passwort verarbeitet.
+                </p>
+
+                <!-- KONFIGURATION: Aussage zur Passwortspeicherung muss mit der tatsächlichen Backend-Implementierung übereinstimmen -->
+                <p>
+                    Das Passwort wird nicht im Klartext gespeichert,
+                    sondern in gehashter Form in der Datenbank hinterlegt.
+                </p>
+
+                <p>
+                    Die gespeicherten Daten werden verwendet, um das
+                    Benutzerkonto bereitzustellen, die Anmeldung zu
+                    ermöglichen und Bestellungen einem Benutzerkonto
+                    zuzuordnen.
+                </p>
+
+            </section>
+
+
+            <!-- E-Mail-Verifizierung -->
+            <section class="legal-section">
+
+                <h2>3. E-Mail-Verifizierung</h2>
+
+                <!-- KONFIGURATION: Beschreibung der Verifizierung anpassen, falls die E-Mail-Verifizierung deaktiviert oder technisch verändert wird -->
+                <p>
+                    Nach der Registrierung kann eine Verifizierung der
+                    angegebenen E-Mail-Adresse erforderlich sein.
+                </p>
+
+                <p>
+                    Hierzu wird eine E-Mail mit den für die Verifizierung
+                    erforderlichen Informationen an die angegebene
+                    E-Mail-Adresse gesendet.
+                </p>
+
+                <!-- KONFIGURATION: Mailanbieter, Absenderadresse und SMTP-Konfiguration werden im Backend festgelegt und müssen vor Inbetriebnahme angepasst werden -->
+                <p>
+                    Der Versand dieser E-Mails erfolgt über die für den
+                    Online-Shop konfigurierte E-Mail-Infrastruktur.
+                </p>
+
+            </section>
+
+
+            <!-- Login und Sessions -->
+            <section class="legal-section">
+
+                <h2>4. Anmeldung und Sitzungsverwaltung</h2>
+
+                <!-- KONFIGURATION: Beschreibung der Sitzungsverwaltung muss mit der tatsächlichen Authentifizierungs- und Session-Lösung übereinstimmen -->
+                <p>
+                    Nach erfolgreicher Anmeldung wird eine Sitzung
+                    eingerichtet, damit angemeldete Benutzer während
+                    der Nutzung des Online-Shops identifiziert werden
+                    können.
+                </p>
+
+                <p>
+                    Hierfür wird ein technisch erforderliches
+                    Session-Cookie verwendet.
+                </p>
+
+                <p>
+                    Das Session-Cookie dient insbesondere dazu,
+                    Anmeldungen aufrechtzuerhalten und geschützte
+                    Bereiche des Online-Shops bereitzustellen.
+                </p>
+
+                <!-- KONFIGURATION: Session-Laufzeit und Cookie-Einstellungen mit der Backend-Konfiguration abgleichen -->
+                <p>
+                    Die konkrete Laufzeit und technische Konfiguration
+                    der Sitzung richtet sich nach der im Backend
+                    vorgenommenen Session-Konfiguration.
+                </p>
+
+            </section>
+
+
+            <!-- Passwort -->
+            <section class="legal-section">
+
+                <h2>5. Passwort und Kontozugang</h2>
+
+                <p>
+                    Für die Anmeldung wird das vom Benutzer festgelegte
+                    Passwort verwendet.
+                </p>
+
+                <!-- KONFIGURATION: Aussage zur Passwortspeicherung muss mit der im Backend verwendeten Hashing-Lösung übereinstimmen -->
+                <p>
+                    Passwörter werden nicht im Klartext gespeichert.
+                    Zur Überprüfung der Anmeldung wird der gespeicherte
+                    Passwort-Hash verwendet.
+                </p>
+
+                <!-- KONFIGURATION: Beschreibung des Passwort-Reset-Prozesses bei Änderungen an der technischen Umsetzung anpassen -->
+                <p>
+                    Soweit eine Funktion zum Zurücksetzen eines Passworts
+                    verwendet wird, werden die dafür erforderlichen Daten
+                    ausschließlich zur Bearbeitung dieses Vorgangs
+                    verarbeitet.
+                </p>
+
+            </section>
+
+
+            <!-- Warenkorb -->
+            <section class="legal-section">
+
+                <h2>6. Warenkorb</h2>
+
+                <!-- KONFIGURATION: Verarbeitete Warenkorbdaten bei Änderungen an der Warenkorblogik entsprechend anpassen -->
+                <p>
+                    Für die Bereitstellung des Warenkorbs werden die
+                    ausgewählten Produkte, Mengen und die für die
+                    Berechnung des Warenkorbs erforderlichen Informationen
+                    verarbeitet.
+                </p>
+
+                <!-- KONFIGURATION: Hinweis zur lokalen Speicherung muss mit der tatsächlichen Verwendung von localStorage im Frontend übereinstimmen -->
+                <p>
+                    Soweit Warenkorbdaten lokal im Browser gespeichert
+                    werden, dienen diese Daten dazu, den Warenkorb auch
+                    beim Wechsel zwischen verschiedenen Seiten des
+                    Online-Shops bereitzustellen.
+                </p>
+
+            </section>
+
+
+            <!-- Bestellungen -->
+            <section class="legal-section">
+
+                <h2>7. Bestellungen</h2>
+
+                <!-- KONFIGURATION: Auflistung der Bestelldaten bei Änderungen an Checkout, Datenbank oder Bestellprozess aktualisieren -->
+                <p>
+                    Zur Durchführung einer Bestellung werden die für
+                    die Bestellung und Lieferung erforderlichen Daten
+                    verarbeitet.
+                </p>
+
+                <p>
+                    Dazu können insbesondere folgende Daten gehören:
+                </p>
+
+                <ul>
+                    <li>Vor- und Nachname</li>
+                    <li>E-Mail-Adresse</li>
+                    <li>Lieferanschrift</li>
+                    <li>Bestellnummer</li>
+                    <li>Rechnungsnummer</li>
+                    <li>bestellte Produkte und Mengen</li>
+                    <li>Produktpreise und Gesamtbetrag</li>
+                    <li>Bestellstatus</li>
+                    <li>Zahlungsart</li>
+                    <li>Zahlungsstatus</li>
+                    <li>Zeitpunkt der Bestellung</li>
+                </ul>
+
+                <p>
+                    Diese Daten werden insbesondere zur Bearbeitung,
+                    Zuordnung und Dokumentation der Bestellung sowie
+                    zur Abwicklung der Lieferung und Zahlung verwendet.
+                </p>
+
+            </section>
+
+
+            <!-- Zahlung -->
+            <section class="legal-section">
+
+                <h2>8. Zahlungsabwicklung</h2>
+
+                <!-- KONFIGURATION: Angebotene Zahlungsarten mit Checkout und Backend abgleichen und bei Änderungen aktualisieren -->
+                <p>
+                    Für Bestellungen stehen PayPal und Kauf auf Rechnung
+                    als Zahlungsarten zur Verfügung.
+                </p>
+
+
+                <h3>PayPal</h3>
+
+                <!-- KONFIGURATION: Beschreibung der PayPal-Zahlungsabwicklung muss mit der tatsächlich eingesetzten PayPal-Integration übereinstimmen -->
+                <p>
+                    Bei Auswahl von PayPal wird der Benutzer für die
+                    Zahlungsabwicklung an PayPal weitergeleitet.
+                </p>
+
+                <p>
+                    Die für die Zahlungsabwicklung erforderlichen Daten
+                    werden dabei durch PayPal verarbeitet.
+                </p>
+
+                <!-- KONFIGURATION: Gespeicherte PayPal-Daten bei Änderungen an Backend oder Datenbankschema aktualisieren -->
+                <p>
+                    Im Online-Shop kann eine PayPal-Bestell- bzw.
+                    Transaktionskennung gespeichert werden, um die Zahlung
+                    einer Bestellung zuordnen zu können.
+                </p>
+
+                <!-- KONFIGURATION: Aussage zur Speicherung von Zahlungsdaten muss mit der tatsächlichen technischen Integration übereinstimmen -->
+                <p>
+                    Vollständige Karten- oder Bankverbindungsdaten, die
+                    der Benutzer gegenüber PayPal angibt, werden nicht
+                    unmittelbar durch den Online-Shop gespeichert.
+                </p>
+
+
+                <h3>Kauf auf Rechnung</h3>
+
+                <!-- KONFIGURATION: Beschreibung der beim Rechnungskauf gespeicherten Zahlungsdaten mit Datenbank und Backend abgleichen -->
+                <p>
+                    Bei Kauf auf Rechnung werden die Bestellung und der
+                    zugehörige Zahlungsstatus gespeichert.
+                </p>
+
+                <p>
+                    Die Bankverbindung des Kunden wird dabei nicht als
+                    Bestandteil der Bestellung im Online-Shop gespeichert.
+                </p>
+
+                <!-- KONFIGURATION: Zahlungsziel bei Änderung auch in Checkout, AGB, Rechnung, E-Mails und Backend anpassen -->
+                <p>
+                    Der Rechnungsbetrag ist innerhalb von 14 Tagen zu
+                    zahlen.
+                </p>
+
+            </section>
+
+
+            <!-- E-Mails -->
+            <section class="legal-section">
+
+                <h2>9. Bestell- und Service-E-Mails</h2>
+
+                <!-- KONFIGURATION: Auflistung der versendeten E-Mail-Arten bei Änderungen am Mail-System aktualisieren -->
+                <p>
+                    Die hinterlegte E-Mail-Adresse kann verwendet werden,
+                    um für die Nutzung des Online-Shops erforderliche
+                    Nachrichten zu versenden.
+                </p>
+
+                <p>
+                    Hierzu können insbesondere Registrierungs- und
+                    Verifizierungsnachrichten, Bestellbestätigungen,
+                    Informationen zur Bestellung sowie Nachrichten im
+                    Zusammenhang mit einem Widerruf gehören.
+                </p>
+
+                <!-- KONFIGURATION: E-Mail-Absender, SMTP-Anbieter und Mail-Konfiguration vor Inbetriebnahme im Backend anpassen -->
+                <p>
+                    Der technische Versand erfolgt über die im Backend
+                    konfigurierte E-Mail-Infrastruktur.
+                </p>
+
+            </section>
+
+
+            <!-- Widerruf -->
+            <section class="legal-section">
+
+                <h2>10. Elektronischer Widerruf</h2>
+
+                <!-- KONFIGURATION: Beschreibung nur verwenden, solange das elektronische Widerrufsformular tatsächlich angeboten wird -->
+                <p>
+                    Über das elektronische Widerrufsformular können
+                    Benutzer einen Widerruf zu einer Bestellung
+                    übermitteln.
+                </p>
+
+                <!-- KONFIGURATION: Erhobene Daten müssen mit widerrufen.html, withdrawal.js und Backend übereinstimmen -->
+                <p>
+                    Hierbei werden insbesondere der angegebene Name,
+                    die E-Mail-Adresse und die Bestellnummer verarbeitet,
+                    um den Widerruf einer Bestellung zuordnen und
+                    bearbeiten zu können.
+                </p>
+
+                <!-- KONFIGURATION: Aussage zum Versand der Eingangsbestätigung mit dem tatsächlichen Mail-Prozess abstimmen -->
+                <p>
+                    Nach erfolgreicher Übermittlung kann eine
+                    Eingangsbestätigung an die angegebene E-Mail-Adresse
+                    versendet werden.
+                </p>
+
+            </section>
+
+
+            <!-- Kontolöschung -->
+            <section class="legal-section">
+
+                <h2>11. Löschung des Benutzerkontos</h2>
+
+                <!-- KONFIGURATION: Beschreibung der Kontolöschung muss mit der tatsächlichen Lösch- und Anonymisierungslogik im Backend übereinstimmen -->
+                <p>
+                    Benutzer können die Löschung ihres Benutzerkontos
+                    veranlassen.
+                </p>
+
+                <p>
+                    Soweit Daten nicht mehr für die Bereitstellung des
+                    Benutzerkontos benötigt werden, werden diese gelöscht
+                    oder anonymisiert.
+                </p>
+
+                <!-- KONFIGURATION: Umgang mit historischen Bestelldaten und Aufbewahrungsfristen vor realer Inbetriebnahme rechtlich und technisch prüfen -->
+                <p>
+                    Daten aus bereits abgeschlossenen Bestellungen können
+                    weiterhin gespeichert werden, soweit dies zur
+                    Erfüllung gesetzlicher Aufbewahrungspflichten oder
+                    zur Dokumentation bereits abgeschlossener Vorgänge
+                    erforderlich ist.
+                </p>
+
+            </section>
+
+
+            <!-- Speicherdauer -->
+            <section class="legal-section">
+
+                <h2>12. Speicherdauer</h2>
+
+                <!-- KONFIGURATION: Tatsächliche Speicher- und Löschfristen der eingesetzten Systeme vor Inbetriebnahme ermitteln und bei Bedarf konkretisieren -->
+                <p>
+                    Personenbezogene Daten werden grundsätzlich nur so
+                    lange gespeichert, wie dies für den jeweiligen Zweck
+                    erforderlich ist.
+                </p>
+
+                <p>
+                    Soweit gesetzliche Aufbewahrungspflichten bestehen,
+                    können bestimmte Daten über einen längeren Zeitraum
+                    gespeichert werden.
+                </p>
+
+                <p>
+                    Nach Wegfall des Verarbeitungszwecks und Ablauf
+                    gegebenenfalls bestehender Aufbewahrungsfristen
+                    werden die betreffenden Daten gelöscht oder
+                    anonymisiert.
+                </p>
+
+            </section>
+
+
+            <!-- Hosting -->
+            <section class="legal-section">
+
+                <h2>13. Hosting und technische Serverdaten</h2>
+
+                <!-- KONFIGURATION: Abschnitt nach Auswahl des tatsächlichen Hostinganbieters mit dessen realer technischer Datenverarbeitung abgleichen -->
+                <p>
+                    Beim produktiven Betrieb des Online-Shops können
+                    technisch erforderliche Daten durch den eingesetzten
+                    Webserver bzw. Hostinganbieter verarbeitet werden.
+                </p>
+
+                <!-- KONFIGURATION: Tatsächlich protokollierte Serverdaten nach Auswahl und Konfiguration des Hostings prüfen -->
+                <p>
+                    Dazu können beispielsweise IP-Adresse, Datum und
+                    Uhrzeit des Zugriffs, aufgerufene Seite,
+                    Browserinformationen und technische Fehlerdaten
+                    gehören.
+                </p>
+
+                <p>
+                    Diese Daten können insbesondere für den sicheren und
+                    stabilen Betrieb des Online-Shops sowie zur
+                    Fehleranalyse erforderlich sein.
+                </p>
+
+
+                <div class="legal-placeholder">
+
+                    <strong>
+                        Hosting vor Inbetriebnahme ergänzen
+                    </strong>
+
+                    <!-- KONFIGURATION: Tatsächlichen Hostinganbieter eintragen -->
+                    <span>
+                        Hostinganbieter: [HOSTINGANBIETER]
+                    </span>
+
+                    <!-- KONFIGURATION: Tatsächlichen Standort der eingesetzten Server bzw. die relevanten Hostingangaben eintragen -->
+                    <span>
+                        Serverstandort: [SERVERSTANDORT]
+                    </span>
+
+                    <!-- KONFIGURATION: Tatsächliche Speicherdauer der Server-Logs entsprechend der Hosting-Konfiguration eintragen -->
+                    <span>
+                        Speicherdauer der Server-Logs:
+                        [SPEICHERDAUER DER SERVER-LOGS]
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Rechte -->
+            <section class="legal-section">
+
+                <h2>14. Rechte betroffener Personen</h2>
+
+                <!-- KONFIGURATION: Betroffenenrechte vor einer realen Inbetriebnahme rechtlich auf Vollständigkeit und Aktualität prüfen -->
+                <p>
+                    Betroffene Personen haben im Rahmen der gesetzlichen
+                    Voraussetzungen insbesondere das Recht auf Auskunft
+                    über die zu ihrer Person gespeicherten Daten sowie
+                    auf Berichtigung unrichtiger Daten.
+                </p>
+
+                <p>
+                    Darüber hinaus können je nach den gesetzlichen
+                    Voraussetzungen Rechte auf Löschung, Einschränkung
+                    der Verarbeitung, Datenübertragbarkeit und Widerspruch
+                    bestehen.
+                </p>
+
+                <p>
+                    Betroffene Personen haben außerdem das Recht, sich
+                    bei einer zuständigen Datenschutzaufsichtsbehörde
+                    zu beschweren.
+                </p>
+
+                <!-- KONFIGURATION: Zuständige Datenschutzaufsichtsbehörde anhand des endgültigen Unternehmenssitzes prüfen und bei Bedarf konkret benennen -->
+                <p>
+                    Welche Datenschutzaufsichtsbehörde zuständig ist,
+                    richtet sich insbesondere nach dem Sitz des
+                    verantwortlichen Unternehmens.
+                </p>
+
+            </section>
+
+
+            <!-- Rechtsgrundlagen -->
+            <section class="legal-section">
+
+                <h2>15. Rechtsgrundlagen der Verarbeitung</h2>
+
+                <!-- KONFIGURATION: Rechtsgrundlagen vor Produktivbetrieb anhand der tatsächlich stattfindenden Verarbeitungen und eingesetzten Dienste rechtlich prüfen -->
+                <p>
+                    Personenbezogene Daten werden verarbeitet, soweit
+                    dies zur Durchführung vorvertraglicher Maßnahmen
+                    oder zur Erfüllung eines Vertrags erforderlich ist.
+                </p>
+
+                <p>
+                    Darüber hinaus können Daten verarbeitet werden,
+                    soweit dies zur Erfüllung gesetzlicher Verpflichtungen
+                    erforderlich ist.
+                </p>
+
+                <p>
+                    Soweit eine Verarbeitung zur Wahrung berechtigter
+                    Interessen erforderlich ist, erfolgt sie nur, sofern
+                    nicht überwiegende Interessen oder Rechte der
+                    betroffenen Person entgegenstehen.
+                </p>
+
+                <p>
+                    Soweit für eine Verarbeitung eine Einwilligung
+                    erforderlich ist, erfolgt die Verarbeitung auf
+                    Grundlage der erteilten Einwilligung.
+                </p>
+
+            </section>
+
+
+            <!-- Änderungen -->
+            <section class="legal-section">
+
+                <h2>16. Änderungen dieser Datenschutzerklärung</h2>
+
+                <!-- KONFIGURATION: Datenschutzerklärung bei neuen Funktionen, Diensten, Zahlungsarten, Mailanbietern oder Hostingänderungen aktualisieren -->
+                <p>
+                    Diese Datenschutzerklärung kann angepasst werden,
+                    wenn sich Funktionen des Online-Shops, eingesetzte
+                    Dienste oder die Verarbeitung personenbezogener
+                    Daten ändern.
+                </p>
+
+                <p>
+                    Die jeweils aktuelle Fassung wird auf dieser Seite
+                    bereitgestellt.
+                </p>
+
+            </section>
+
+
+            <!-- Kontakt -->
+            <section class="legal-section">
+
+                <h2>Fragen zum Datenschutz</h2>
+
+                <!-- KONFIGURATION: Kontaktweg für Datenschutzanfragen an den tatsächlich vorgesehenen Kontaktprozess anpassen -->
+                <p>
+                    Bei Fragen zur Verarbeitung personenbezogener Daten
+                    kannst du dich über die auf unserer Kontaktseite
+                    angegebenen Kontaktdaten an uns wenden.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="legal-contact-link"
+                >
+                    Zur Kontaktseite
+                </a>
+
+            </section>
+
+
+            <!-- Zurück -->
+            <div class="legal-back">
+
+                <a href="javascript:history.back()">
+                    ← Zurück
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

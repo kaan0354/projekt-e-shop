@@ -1,0 +1,416 @@
+<!-- Administrationsseite -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Administration | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">
+                        Startseite
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Shop
+                    </a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">
+                        Bestellungen
+                    </a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a
+                        class="active"
+                        href="#"
+                        id="account-name"
+                    >
+                        Konto
+                    </a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">
+                                Anmelden
+                            </a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">
+                                Registrieren
+                            </a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">
+                                Administration
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">
+                                Mein Konto
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">
+                                Abmelden
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        Kontakt
+                    </a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">
+                        Warenkorb
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Administration -->
+    <main class="admin-page section-p1">
+
+
+        <!-- Produkte -->
+        <section
+            id="admin-products"
+            class="admin-section"
+        >
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <h2>
+                        Produktverwaltung
+                    </h2>
+
+                    <p>
+                        Produkte im Shop aktivieren oder deaktivieren.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Neues Produkt hinzufügen -->
+            <div class="admin-product-create">
+
+                <h3>
+                    Neues Produkt hinzufügen
+                </h3>
+
+                <div class="admin-product-form">
+
+                    <input
+                        type="text"
+                        id="new-product-name"
+                        placeholder="Produktname"
+                    >
+
+                    <input
+                        type="number"
+                        id="new-product-price"
+                        min="0"
+                        step="0.01"
+                        placeholder="Preis in €"
+                    >
+
+                    <textarea
+                        id="new-product-description"
+                        placeholder="Produktbeschreibung"
+                    ></textarea>
+
+                    <input
+                        type="number"
+                        id="new-product-stock"
+                        min="0"
+                        step="1"
+                        placeholder="Bestand"
+                    >
+
+                    <input
+                        type="text"
+                        id="new-product-image"
+                        placeholder="Bildpfad, z. B. img/blau.png"
+                    >
+
+                    <button
+                        type="button"
+                        id="admin-create-product"
+                    >
+                        Produkt hinzufügen
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Produktliste -->
+            <div id="admin-product-list">
+
+                <p>
+                    Produkte werden geladen...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bestellungen -->
+        <section
+            id="produktion"
+            class="admin-section"
+        >
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <h2>
+                        Bestellungen
+                    </h2>
+
+                    <p>
+                        Bestellungen verwalten und ihren Status bearbeiten.
+                    </p>
+
+                </div>
+
+
+                <!-- Suche -->
+                <div class="orders-search">
+
+                    <!-- KONFIGURATION: Präfix bei Änderung des Bestellnummernformats mit Backend und JavaScript gemeinsam anpassen -->
+                    <span>ORD-</span>
+
+                    <input
+                        type="text"
+                        id="admin-order-search"
+                        placeholder="Bestellnummer"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Filter -->
+            <div class="admin-order-filters">
+
+                <button
+                    type="button"
+                    class="admin-filter active"
+                    data-filter="all"
+                >
+                    Alle
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-filter"
+                    data-filter="offen"
+                >
+                    Offen
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-filter"
+                    data-filter="in_bearbeitung"
+                >
+                    In Bearbeitung
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-filter"
+                    data-filter="versendet"
+                >
+                    Versendet
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-filter"
+                    data-filter="abgeschlossen"
+                >
+                    Abgeschlossen
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-filter"
+                    data-filter="storniert"
+                >
+                    Storniert
+                </button>
+
+            </div>
+
+
+            <!-- Bestellliste -->
+            <div id="production-orders">
+
+                <p>
+                    Bestellungen werden geladen...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+# Lokale Zugangsdaten und Umgebungsvariablen nicht hochladen
+.env
+
+# Installierte Node.js-Pakete nicht hochladen
+node_modules/
+
+# Log-Dateien
+*.log
+
+# Betriebssystem-Dateien
+.DS_Store
+Thumbs.db

@@ -1,0 +1,574 @@
+<!-- Checkout -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Checkout | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">
+                        Konto
+                    </a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">Administration</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">Mein Konto</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">Abmelden</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a class="active" href="warenkorb.html">
+                        Warenkorb
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Checkout -->
+    <main class="checkout-page section-p1">
+
+
+        <!-- Nicht angemeldet -->
+        <div
+            id="checkout-login-state"
+            class="checkout-access-state"
+            style="display: none;"
+        >
+
+            <h2>Du bist nicht angemeldet</h2>
+
+            <p>
+                Melde dich an, um deinen Einkauf abzuschließen.
+            </p>
+
+            <a href="login.html" class="btn-primary">
+                Zum Login
+            </a>
+
+            <p class="checkout-access-secondary">
+                Noch kein Konto?
+                <a href="register.html">Jetzt registrieren</a>
+            </p>
+
+        </div>
+
+
+        <!-- Direkter Seitenaufruf -->
+        <div
+            id="checkout-direct-state"
+            class="checkout-access-state"
+            style="display: none;"
+        >
+
+            <h2>Checkout nicht verfügbar</h2>
+
+            <p>
+                Der Checkout kann nur über deinen Warenkorb gestartet werden.
+            </p>
+
+            <a href="warenkorb.html" class="btn-primary">
+                Zum Warenkorb
+            </a>
+
+            <p class="checkout-access-secondary">
+                Oder
+                <a href="shop.html">weiter einkaufen</a>
+            </p>
+
+        </div>
+
+
+        <!-- Checkout-Inhalt -->
+        <div
+            class="checkout-container"
+            id="checkout-content"
+            style="display: none;"
+        >
+
+            <div class="checkout-header">
+
+                <h2>Checkout</h2>
+
+                <p>
+                    Überprüfe deine Lieferdaten und schließe
+                    anschließend deine Bestellung ab.
+                </p>
+
+            </div>
+
+
+            <div class="checkout-layout">
+
+
+                <!-- Lieferadresse -->
+                <section class="checkout-card">
+
+                    <div class="checkout-card-header">
+
+                        <h3>Lieferadresse</h3>
+
+                        <p>
+                            Gib die Adresse ein, an die deine
+                            Bestellung geliefert werden soll.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        id="checkout-form"
+                        class="checkout-form"
+                    >
+
+                        <label for="full-name">
+                            Vor- und Nachname
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            autocomplete="name"
+                            required
+                        >
+
+
+                        <div class="checkout-form-row">
+
+                            <div class="checkout-form-field checkout-street">
+
+                                <label for="street">
+                                    Straße und Hausnummer
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="street"
+                                    autocomplete="street-address"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="checkout-form-field checkout-postal">
+
+                                <label for="postal-code">
+                                    PLZ
+                                </label>
+
+                                <!-- KONFIGURATION: Maximale PLZ-Länge an das unterstützte Liefergebiet anpassen; aktuell auf fünfstellige deutsche PLZ ausgelegt -->
+                                <input
+                                    type="text"
+                                    id="postal-code"
+                                    inputmode="numeric"
+                                    autocomplete="postal-code"
+                                    maxlength="5"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <label for="city">
+                            Ort
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            autocomplete="address-level2"
+                            required
+                        >
+
+
+                        <label for="checkout-email">
+                            E-Mail-Adresse
+                        </label>
+
+                        <input
+                            type="email"
+                            id="checkout-email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </form>
+
+
+                    <!-- Zahlung -->
+                    <div class="checkout-payment">
+
+                        <h3>Zahlung</h3>
+
+                        <p>
+                            Wähle deine gewünschte Zahlungsart.
+                        </p>
+
+
+                        <!-- KONFIGURATION:
+                             Verfügbare Zahlungsarten nur gemeinsam mit der
+                             Zahlungslogik in checkout.js und dem Backend ändern.
+                        -->
+                        <div class="checkout-payment-methods">
+
+                            <label class="checkout-payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment-method"
+                                    value="paypal"
+                                    checked
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        PayPal / Kreditkarte
+                                    </strong>
+
+                                    <span>
+                                        Sicher über PayPal bezahlen
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="checkout-payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment-method"
+                                    value="invoice"
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        Kauf auf Rechnung
+                                    </strong>
+
+                                    <!-- KONFIGURATION: Zahlungsziel bei Änderung auch in Backend, Rechnung, E-Mails und Rechtstexten anpassen -->
+                                    <span>
+                                        Innerhalb von 14 Tagen bezahlen
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Rechtliche Zustimmung -->
+                        <label class="checkout-legal-consent">
+
+                            <input
+                                type="checkbox"
+                                id="checkout-legal-checkbox"
+                            >
+
+                            <span>
+                                Ich stimme den
+                                <a href="agb.html" target="_blank">AGB</a>
+                                und der
+                                <a href="widerruf.html" target="_blank">Widerrufsbelehrung</a>
+                                zu.
+                            </span>
+
+                        </label>
+
+
+                        <!-- PayPal -->
+                        <div id="paypal-payment-section">
+
+                            <div id="paypal-button-container"></div>
+
+                        </div>
+
+
+                        <!-- Rechnung -->
+                        <div
+                            id="invoice-payment-section"
+                            style="display: none;"
+                        >
+
+                            <div class="invoice-payment-info">
+
+                                <strong>
+                                    Kauf auf Rechnung
+                                </strong>
+
+                                <!-- KONFIGURATION: Zahlungsziel bei Änderung auch in Backend, Rechnung, E-Mails und Rechtstexten anpassen -->
+                                <p>
+                                    Du erhältst deine Rechnung per E-Mail.
+                                    Der Rechnungsbetrag ist innerhalb von
+                                    14 Tagen zu bezahlen.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="invoice-order-button"
+                                class="btn-primary"
+                            >
+                                Zahlungspflichtig bestellen
+                            </button>
+
+                        </div>
+
+
+                        <!-- PayPal bestätigt -->
+                        <div
+                            id="final-order-section"
+                            class="final-order-section"
+                            style="display: none;"
+                        >
+
+                            <div class="paypal-confirmed">
+
+                                <strong>
+                                    PayPal wurde bestätigt ✓
+                                </strong>
+
+                                <p>
+                                    Deine Zahlungsmethode wurde vorbereitet.
+                                    Überprüfe deine Bestellung und schließe
+                                    sie anschließend ab.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="final-order-button"
+                                class="btn-primary"
+                            >
+                                Zahlungspflichtig bestellen
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Bestellübersicht -->
+                <aside class="checkout-summary">
+
+                    <h3>Deine Bestellung</h3>
+
+                    <div id="checkout-summary-items">
+
+                        <p>
+                            Bestellung wird geladen...
+                        </p>
+
+                    </div>
+
+
+                    <div class="checkout-summary-total">
+
+                        <span>Gesamt</span>
+
+                        <strong id="checkout-summary-total">
+                            – €
+                        </strong>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <!-- PayPal -->
+
+    <!-- KONFIGURATION:
+         PayPal-Client-ID vor Inbetriebnahme durch die Client-ID
+         der vorgesehenen PayPal-Anwendung ersetzen.
+         Die Währung "EUR" bei Verwendung einer anderen Shop-Währung
+         ebenfalls mit Frontend und Backend abstimmen.
+    -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AYuTiARZpAewEdKggnq4TJD6zk72T8_0aDYnVo9q_cOXiCvj_gWs12dGl4fXhMmDErwPnvUvf-lwPJab&currency=EUR"></script>
+
+    <script src="js/common.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>

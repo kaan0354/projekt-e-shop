@@ -1,0 +1,448 @@
+<!-- Kontakt-, Service- und Rechtshinweise des E-Shops -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Kontakt & Rechtliches | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">
+                        Konto
+                    </a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">
+                                Administration
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">
+                                Mein Konto
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">
+                                Abmelden
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a class="active" href="contact.html">
+                        Kontakt
+                    </a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Kontakt -->
+    <main class="contact-page section-p1">
+
+        <div class="contact-container">
+
+
+            <!-- Einführung -->
+            <section class="contact-header">
+
+                <h2>Kontakt & Rechtliches</h2>
+
+                <!-- KONFIGURATION: Shopname im Einführungstext an den tatsächlichen Namen des Shops anpassen -->
+                <p>
+                    Du hast Fragen zu deiner Bestellung, unseren Produkten
+                    oder benötigst Unterstützung? Hier findest du unsere
+                    Kontaktinformationen sowie wichtige Hinweise rund um
+                    den MusterShop.
+                </p>
+
+            </section>
+
+
+            <!-- Kontaktdaten -->
+            <section class="contact-card">
+
+                <h3>Kontaktinformationen</h3>
+
+                <div class="contact-info-grid">
+
+                    <div class="contact-info-item">
+
+                        <span class="contact-info-label">
+                            Adresse
+                        </span>
+
+                        <!-- KONFIGURATION: Firmenname und Geschäftsadresse vor Inbetriebnahme anpassen -->
+                        <p>
+                            Muster GmbH<br>
+                            Musterstraße 12<br>
+                            66111 Saarbrücken
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span class="contact-info-label">
+                            Telefon
+                        </span>
+
+                        <!-- KONFIGURATION: Geschäftliche Telefonnummer vor Inbetriebnahme anpassen -->
+                        <p>
+                            +49 123 12345
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span class="contact-info-label">
+                            E-Mail
+                        </span>
+
+                        <!-- KONFIGURATION: Kontakt-E-Mail-Adresse vor Inbetriebnahme anpassen -->
+                        <p>
+                            shop@muster.de
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Impressum -->
+            <section id="impressum" class="contact-section">
+
+                <h3>Impressum</h3>
+
+                <p>
+                    Angaben gemäß § 5 DDG
+                </p>
+
+                <div class="legal-placeholder">
+
+                    <!-- KONFIGURATION: Vollständigen Firmennamen des Betreibers eintragen -->
+                    <strong>
+                        Muster GmbH
+                    </strong>
+
+                    <!-- KONFIGURATION: Geschäftsanschrift und Land des Betreibers eintragen -->
+                    <span>
+                        Musterstraße 12 · 66111 Saarbrücken · Deutschland
+                    </span>
+
+                    <!-- KONFIGURATION: Vertretungsberechtigte Geschäftsführung eintragen -->
+                    <span>
+                        Geschäftsführer: Max Mustermann
+                    </span>
+
+                    <!-- KONFIGURATION: Geschäftliche Telefonnummer und E-Mail-Adresse eintragen -->
+                    <span>
+                        Telefon: +49 123 12345 · E-Mail: shop@muster.de
+                    </span>
+
+                    <!-- KONFIGURATION: Zuständiges Registergericht und Handelsregisternummer eintragen -->
+                    <span>
+                        Amtsgericht Saarbrücken · HRB 12345
+                    </span>
+
+                    <!-- KONFIGURATION: Umsatzsteuer-ID und Steuernummer durch die tatsächlichen Unternehmensdaten ersetzen -->
+                    <span>
+                        USt-IdNr.: DE123456789 · Steuernummer: 123/123/12345
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Rückgabe -->
+            <section id="rueckgabe" class="contact-section">
+
+                <h3>Rückgabe & Ersatz</h3>
+
+                <!-- KONFIGURATION: Ablauf für Reklamationen, Rückgaben und Ersatz an die tatsächlichen Geschäftsprozesse des Shops anpassen -->
+                <p>
+                    Solltest du ein beschädigtes, fehlerhaftes oder
+                    mangelhaftes Produkt erhalten haben, kontaktiere uns
+                    bitte unter Angabe deiner Bestellnummer und einer
+                    kurzen Beschreibung des Problems.
+                </p>
+
+                <p>
+                    Wir prüfen deine Anfrage und informieren dich
+                    anschließend über die weiteren Schritte bezüglich
+                    Rückgabe, Ersatz oder einer anderen geeigneten Lösung.
+                </p>
+
+                <p>
+                    Das gesetzliche Widerrufsrecht bleibt davon unberührt.
+                    Weitere Informationen findest du in unserer
+                    <a href="widerruf.html">
+                        Widerrufsbelehrung
+                    </a>.
+                </p>
+
+            </section>
+
+
+            <!-- Versand -->
+            <section id="versand" class="contact-section">
+
+                <h3>Versand & Verfügbarkeit</h3>
+
+                <p>
+                    Die Verfügbarkeit unserer Werkstücke wird direkt im
+                    Online-Shop angezeigt. Produkte, die als nicht verfügbar
+                    gekennzeichnet sind, können vorübergehend nicht bestellt
+                    werden.
+                </p>
+
+                <!-- KONFIGURATION: Liefergebiet, Lieferzeit und Versandkosten an die tatsächlichen Versandbedingungen anpassen -->
+                <p>
+                    Die Lieferung erfolgt innerhalb Deutschlands.
+                    Die voraussichtliche Lieferzeit beträgt 3–5 Werktage.
+                    Für die Standardlieferung werden keine Versandkosten
+                    berechnet.
+                </p>
+
+                <!-- KONFIGURATION: Ablauf bei Kauf auf Rechnung bei Änderung der Zahlungsbedingungen mit Checkout, AGB, E-Mails und Backend abstimmen -->
+                <p>
+                    Bei Kauf auf Rechnung erfolgt die weitere Bearbeitung
+                    und der Versand nach Eingang der vollständigen Zahlung.
+                </p>
+
+                <p>
+                    Den aktuellen Status deiner Bestellung kannst du
+                    nach der Anmeldung im Bereich „Bestellungen“ einsehen.
+                </p>
+
+            </section>
+
+
+            <!-- Weitere rechtliche Informationen -->
+            <section class="contact-section">
+
+                <h3>Weitere rechtliche Informationen</h3>
+
+                <p>
+                    Weitere Informationen zu Bestellungen, Verträgen und
+                    Datenschutz findest du auf folgenden Seiten:
+                </p>
+
+                <p>
+                    <a href="agb.html">
+                        Allgemeine Geschäftsbedingungen
+                    </a>
+                </p>
+
+                <p>
+                    <a href="widerruf.html">
+                        Widerrufsbelehrung
+                    </a>
+                </p>
+
+                <p>
+                    <a href="widerrufen.html">
+                        Vertrag elektronisch widerrufen
+                    </a>
+                </p>
+
+                <p>
+                    <a href="datenschutzrichtlinien.html">
+                        Datenschutzerklärung
+                    </a>
+                </p>
+
+            </section>
+
+
+            <!-- Hilfe -->
+            <section id="hilfe" class="contact-section">
+
+                <h3>Hilfe</h3>
+
+                <!-- KONFIGURATION: Support-Ablauf bei Verwendung anderer Kontakt- oder Supportkanäle entsprechend anpassen -->
+                <p>
+                    Bei Fragen zu deinem Konto, einer Bestellung oder
+                    einem Produkt kannst du dich über die oben angegebenen
+                    Kontaktdaten an uns wenden.
+                </p>
+
+                <p>
+                    Halte bei Fragen zu einer Bestellung möglichst deine
+                    Bestellnummer bereit, damit wir dein Anliegen schneller
+                    zuordnen können.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!-- Kontoseite -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Mein Konto | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a class="active" href="#" id="account-name">
+                        Konto
+                    </a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">
+                                Anmelden
+                            </a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">
+                                Registrieren
+                            </a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">
+                                Administration
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">
+                                Mein Konto
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">
+                                Abmelden
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mein Konto -->
+    <main class="account-page section-p1">
+
+
+        <!-- Nicht angemeldet -->
+        <div
+            id="account-login-state"
+            class="account-login-state"
+            style="display: none;"
+        >
+
+            <h2>Du bist nicht angemeldet</h2>
+
+            <p>
+                Melde dich an, um deine Kontoinformationen
+                und Sicherheitseinstellungen zu verwalten.
+            </p>
+
+            <a href="login.html" class="btn-primary">
+                Zum Login
+            </a>
+
+            <p class="account-login-register">
+                Noch kein Konto?
+                <a href="register.html">
+                    Jetzt registrieren
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- Kontobereich -->
+        <section
+            class="account-container"
+            id="account-content"
+        >
+
+            <div class="account-header">
+
+                <h2>Mein Konto</h2>
+
+                <p>
+                    Verwalte hier deine Kontoinformationen
+                    und Sicherheitseinstellungen.
+                </p>
+
+            </div>
+
+
+            <!-- Kontoinformationen -->
+            <div class="account-card">
+
+                <div class="account-card-header">
+
+                    <h3>Kontoinformationen</h3>
+
+                </div>
+
+
+                <div class="account-info-row">
+
+                    <span>Benutzername</span>
+
+                    <strong id="konto-username">
+                        Wird geladen...
+                    </strong>
+
+                </div>
+
+
+                <div class="account-info-row">
+
+                    <span>E-Mail-Adresse</span>
+
+                    <strong id="konto-email">
+                        Wird geladen...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Passwort -->
+            <div class="account-card">
+
+                <div class="account-card-header">
+
+                    <h3>Passwort ändern</h3>
+
+                    <!-- KONFIGURATION: Mindestlänge bei Änderung der Passwortregeln mit Frontend und Backend gemeinsam anpassen -->
+                    <p>
+                        Verwende ein Passwort mit mindestens 8 Zeichen.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="change-password-form"
+                    class="account-password-form"
+                >
+
+                    <label for="current-password">
+                        Aktuelles Passwort
+                    </label>
+
+                    <input
+                        type="password"
+                        id="current-password"
+                        required
+                    >
+
+
+                    <label for="account-new-password">
+                        Neues Passwort
+                    </label>
+
+                    <!-- KONFIGURATION: Mindestlänge muss der im Backend festgelegten Passwortregel entsprechen -->
+                    <input
+                        type="password"
+                        id="account-new-password"
+                        minlength="8"
+                        required
+                    >
+
+
+                    <label for="account-confirm-password">
+                        Neues Passwort wiederholen
+                    </label>
+
+                    <!-- KONFIGURATION: Mindestlänge muss mit dem neuen Passwortfeld und der Backend-Regel übereinstimmen -->
+                    <input
+                        type="password"
+                        id="account-confirm-password"
+                        minlength="8"
+                        required
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        Passwort ändern
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Konto löschen -->
+            <div class="account-danger-zone">
+
+                <div>
+
+                    <h3>Konto löschen</h3>
+
+                    <p>
+                        Dein Benutzerkonto wird gelöscht und deine
+                        persönlichen Kontodaten werden anonymisiert.
+                    </p>
+
+                </div>
+
+                <a
+                    href="delete-konto.html"
+                    class="delete-account-btn"
+                >
+                    Konto löschen
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+    <script src="js/account.js"></script>
+
+</body>
+
+</html>

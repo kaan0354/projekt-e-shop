@@ -1,0 +1,548 @@
+<!-- AGB-Seite des MusterShops -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>AGB | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">Konto</a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">Administration</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">Mein Konto</a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">Abmelden</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- AGB -->
+    <main class="legal-page section-p1">
+
+        <div class="legal-container">
+
+            <div class="legal-header">
+
+                <span class="legal-label">
+                    Rechtliche Informationen
+                </span>
+
+                <h1>
+                    Allgemeine Geschäftsbedingungen
+                </h1>
+
+                <!-- KONFIGURATION: Shopname an den tatsächlichen Namen des Shops anpassen -->
+                <p>
+                    für den MusterShop
+                </p>
+
+            </div>
+
+
+            <!-- Geltungsbereich -->
+            <section class="legal-section">
+
+                <h2>1. Geltungsbereich</h2>
+
+                <!-- KONFIGURATION: Shopname an den tatsächlichen Namen des Shops anpassen -->
+                <p>
+                    Diese Allgemeinen Geschäftsbedingungen gelten für alle
+                    Bestellungen, die über den MusterShop abgeschlossen werden.
+                </p>
+
+                <p>
+                    Vertragspartner des Kunden ist:
+                </p>
+
+                <!-- KONFIGURATION: Firmenname und vollständige Geschäftsanschrift des tatsächlichen Vertragspartners eintragen -->
+                <p>
+                    <strong>Muster GmbH</strong><br>
+                    Musterstraße 12<br>
+                    66111 Saarbrücken<br>
+                    Deutschland
+                </p>
+
+            </section>
+
+
+            <!-- Vertragsschluss -->
+            <section class="legal-section">
+
+                <h2>2. Vertragsschluss</h2>
+
+                <!-- KONFIGURATION: Beschreibung des Vertragsschlusses vor Inbetriebnahme an den tatsächlichen Bestell- und Vertragsablauf des Shops anpassen -->
+                <p>
+                    Die Darstellung der Produkte im E-Shop stellt noch kein
+                    verbindliches Vertragsangebot dar.
+                </p>
+
+                <p>
+                    Der Kunde kann Produkte auswählen und in den Warenkorb
+                    legen. Im Checkout werden die ausgewählten Produkte sowie
+                    der Gesamtpreis nochmals angezeigt. Vor Abschluss der
+                    Bestellung können die eingegebenen Daten überprüft und
+                    geändert werden.
+                </p>
+
+                <p>
+                    Durch den Abschluss des Bestellvorgangs gibt der Kunde ein
+                    verbindliches Angebot zum Kauf der im Warenkorb enthaltenen
+                    Produkte ab.
+                </p>
+
+                <p>
+                    Nach erfolgreichem Abschluss der Bestellung erhält der
+                    Kunde eine Bestätigung per E-Mail.
+                </p>
+
+            </section>
+
+
+            <!-- Produkte -->
+            <section class="legal-section">
+
+                <h2>3. Produkte und Verfügbarkeit</h2>
+
+                <!-- KONFIGURATION: Produktbeschreibung und Verfügbarkeitsregeln bei einem anderen Sortiment oder Bestellablauf entsprechend anpassen -->
+                <p>
+                    Im E-Shop werden die jeweils auf den Produktseiten
+                    dargestellten Werkstücke angeboten.
+                </p>
+
+                <p>
+                    Produkte können nur bestellt werden, solange sie im
+                    E-Shop als verfügbar angezeigt werden.
+                </p>
+
+                <p>
+                    Produktabbildungen dienen der Darstellung der angebotenen
+                    Waren. Geringfügige Abweichungen in Farbe oder Darstellung
+                    können insbesondere durch unterschiedliche
+                    Bildschirmeinstellungen entstehen.
+                </p>
+
+            </section>
+
+
+            <!-- Preise -->
+            <section class="legal-section">
+
+                <h2>4. Preise und Versandkosten</h2>
+
+                <p>
+                    Es gelten die zum Zeitpunkt der Bestellung im E-Shop
+                    angegebenen Preise.
+                </p>
+
+                <!-- KONFIGURATION: Umsatzsteuerregelung an die tatsächliche steuerliche Behandlung des Shopbetreibers anpassen -->
+                <p>
+                    Die angegebenen Preise enthalten die gesetzliche
+                    Umsatzsteuer.
+                </p>
+
+                <!-- KONFIGURATION: Liefergebiet und Versandkosten an die tatsächlichen Versandbedingungen anpassen -->
+                <p>
+                    Für die Standardlieferung innerhalb Deutschlands werden
+                    keine Versandkosten berechnet.
+                </p>
+
+                <p>
+                    Der für die Bestellung geltende Gesamtpreis wird dem Kunden
+                    vor Abschluss des Bestellvorgangs angezeigt.
+                </p>
+
+            </section>
+
+
+            <!-- Zahlung -->
+            <section class="legal-section">
+
+                <h2>5. Zahlung</h2>
+
+                <!-- KONFIGURATION: Verfügbare Zahlungsarten bei Änderungen mit Checkout und Backend abstimmen -->
+                <p>
+                    Im Checkout stehen PayPal sowie Kauf auf Rechnung als
+                    Zahlungsarten zur Verfügung.
+                </p>
+
+                <!-- KONFIGURATION: Angaben zum Zahlungsdienstleister prüfen, wenn PayPal ersetzt oder weitere Zahlungsdienste eingebunden werden -->
+                <p>
+                    Bei Zahlung über PayPal erfolgt die Zahlungsabwicklung
+                    über den Zahlungsdienstleister PayPal. Für die
+                    Zahlungsabwicklung können zusätzlich die Bedingungen
+                    des Zahlungsdienstleisters gelten.
+                </p>
+
+                <!-- KONFIGURATION: Zahlungsziel bei Änderung auch in Checkout, Backend, Rechnung und E-Mails anpassen -->
+                <p>
+                    Bei Kauf auf Rechnung ist der Rechnungsbetrag innerhalb
+                    von 14 Tagen zu zahlen.
+                </p>
+
+                <p>
+                    Die Zahlung ist auf folgendes Konto zu überweisen:
+                </p>
+
+                <!-- KONFIGURATION: Kontoinhaber und Bankverbindung vor Inbetriebnahme durch die tatsächlichen Bankdaten ersetzen -->
+                <p>
+                    <strong>Kontoinhaber:</strong> Muster GmbH<br>
+                    <strong>Bank:</strong> Musterbank<br>
+                    <strong>IBAN:</strong> DE12 3123 1231 2312 3123 12<br>
+                    <strong>BIC:</strong> MUSTDE12XXX
+                </p>
+
+                <!-- KONFIGURATION: Verwendungszweck-Regel bei Änderung des Bestell- oder Rechnungsnummernformats mit Backend und Rechnungslogik abstimmen -->
+                <p>
+                    Bei der Überweisung sind die Bestellnummer und die
+                    Rechnungsnummer als Verwendungszweck anzugeben, damit
+                    die Zahlung eindeutig der Bestellung zugeordnet werden
+                    kann.
+                </p>
+
+                <!-- KONFIGURATION: Bearbeitungs- und Versandablauf bei Rechnungskauf an den tatsächlichen Geschäftsprozess anpassen -->
+                <p>
+                    Bei Kauf auf Rechnung erfolgt die weitere Bearbeitung
+                    der Bestellung und der Versand nach Eingang der
+                    vollständigen Zahlung.
+                </p>
+
+                <!-- KONFIGURATION: Zahlungsfrist und Vorgehen bei ausbleibender Zahlung bei Änderungen mit Backend, Rechnung und E-Mails abstimmen -->
+                <p>
+                    Erfolgt innerhalb der Zahlungsfrist von 14 Tagen kein
+                    Zahlungseingang, kann die Bestellung storniert werden.
+                </p>
+
+            </section>
+
+
+            <!-- Lieferung -->
+            <section class="legal-section">
+
+                <h2>6. Lieferung</h2>
+
+                <p>
+                    Die Lieferung erfolgt an die vom Kunden im Checkout
+                    angegebene Lieferadresse.
+                </p>
+
+                <!-- KONFIGURATION: Liefergebiet und voraussichtliche Lieferzeit an die tatsächlichen Versandbedingungen anpassen -->
+                <p>
+                    Die Lieferung erfolgt innerhalb Deutschlands.
+                    Die voraussichtliche Lieferzeit beträgt 3–5 Werktage.
+                </p>
+
+                <!-- KONFIGURATION: Versandbeginn bei Rechnungskauf an den tatsächlichen Geschäftsprozess anpassen -->
+                <p>
+                    Bei Kauf auf Rechnung beginnt die weitere Bearbeitung
+                    und der Versand nach Eingang der vollständigen Zahlung.
+                </p>
+
+                <p>
+                    Sollte ein bestelltes Produkt ausnahmsweise nicht
+                    verfügbar sein, wird der Kunde darüber informiert.
+                </p>
+
+            </section>
+
+
+            <!-- Eigentumsvorbehalt -->
+            <section class="legal-section">
+
+                <h2>7. Eigentumsvorbehalt</h2>
+
+                <!-- KONFIGURATION: Rechtliche Regelung vor einer realen Inbetriebnahme auf den tatsächlichen Geschäftsbetrieb prüfen -->
+                <p>
+                    Die gelieferte Ware bleibt bis zur vollständigen Bezahlung
+                    Eigentum des Verkäufers.
+                </p>
+
+            </section>
+
+
+            <!-- Widerrufsrecht -->
+            <section class="legal-section">
+
+                <h2>8. Widerrufsrecht</h2>
+
+                <!-- KONFIGURATION: Widerrufsregelungen vor einer realen Inbetriebnahme auf das tatsächliche Angebot und die geltenden Anforderungen prüfen -->
+                <p>
+                    Verbrauchern steht grundsätzlich das gesetzliche
+                    Widerrufsrecht zu.
+                </p>
+
+                <p>
+                    Einzelheiten zu Voraussetzungen, Fristen und zur Ausübung
+                    des Widerrufsrechts finden sich in unserer
+                    <a href="widerruf.html">
+                        Widerrufsbelehrung
+                    </a>.
+                </p>
+
+            </section>
+
+
+            <!-- Mängelhaftung -->
+            <section class="legal-section">
+
+                <h2>9. Mängelhaftung</h2>
+
+                <!-- KONFIGURATION: Rechtlichen Abschnitt vor einer realen Inbetriebnahme auf das tatsächliche Warenangebot prüfen -->
+                <p>
+                    Für die angebotenen Waren gelten die gesetzlichen
+                    Mängelhaftungsrechte.
+                </p>
+
+            </section>
+
+
+            <!-- Vertragstext -->
+            <section class="legal-section">
+
+                <h2>10. Vertragstext und Bestelldaten</h2>
+
+                <!-- KONFIGURATION: Angaben zur Speicherung und Bereitstellung der Bestelldaten an die tatsächliche technische Umsetzung anpassen -->
+                <p>
+                    Die Daten der Bestellung werden nach Abschluss der
+                    Bestellung gespeichert.
+                </p>
+
+                <p>
+                    Registrierte Kunden können ihre Bestellungen über den
+                    Bereich „Bestellungen“ einsehen.
+                </p>
+
+                <p>
+                    Zusätzlich erhält der Kunde nach Abschluss der Bestellung
+                    eine Bestätigung per E-Mail.
+                </p>
+
+                <p>
+                    Die Allgemeinen Geschäftsbedingungen können vor Abschluss
+                    der Bestellung über den entsprechenden Link im Checkout
+                    aufgerufen und gespeichert werden.
+                </p>
+
+            </section>
+
+
+            <!-- Vertragssprache -->
+            <section class="legal-section">
+
+                <h2>11. Vertragssprache</h2>
+
+                <!-- KONFIGURATION: Vertragssprache anpassen, falls der Shop weitere Vertragssprachen anbietet -->
+                <p>
+                    Die für den Vertragsschluss zur Verfügung stehende Sprache
+                    ist Deutsch.
+                </p>
+
+            </section>
+
+
+            <!-- Kontakt -->
+            <section class="legal-section">
+
+                <h2>12. Kontakt</h2>
+
+                <!-- KONFIGURATION: Kontaktweg anpassen, falls für Bestellungen ein anderer Supportkanal vorgesehen ist -->
+                <p>
+                    Bei Fragen zu einer Bestellung oder zum E-Shop können die
+                    auf unserer Kontaktseite angegebenen Kontaktdaten verwendet
+                    werden.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="legal-contact-link"
+                >
+                    Zur Kontaktseite
+                </a>
+
+            </section>
+
+
+            <!-- Zurück -->
+            <div class="legal-back">
+
+                <a href="javascript:history.back()">
+                    ← Zurück
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

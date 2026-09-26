@@ -1,0 +1,308 @@
+<!-- Produktseite -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- KONFIGURATION: Seitentitel und Shopname an den Namen des Shops anpassen -->
+    <title>Produkt | MusterShop</title>
+
+    <!-- KONFIGURATION: Pfad und Dateiformat an das gewünschte Browser-Tab-Symbol des Shops anpassen -->
+    <link rel="icon" type="image/png" href="img/fishlogo.png">
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <div id="toast"></div>
+
+
+    <!-- Header -->
+    <section id="header">
+
+        <a href="index.html">
+
+            <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+            <img
+                src="img/fishlogo.png"
+                class="logo"
+                alt="MusterShop Logo"
+            >
+
+        </a>
+
+        <div class="header-right">
+
+            <span id="header-username"></span>
+
+            <ul id="navbar">
+
+                <li>
+                    <a href="index.html">Startseite</a>
+                </li>
+
+                <li>
+                    <a class="active" href="shop.html">Shop</a>
+                </li>
+
+                <li id="orders-nav">
+                    <a href="bestellungen.html">Bestellungen</a>
+                </li>
+
+
+                <!-- Konto -->
+                <li class="konto-dropdown">
+
+                    <a href="#" id="account-name">Konto</a>
+
+                    <ul class="dropdown">
+
+                        <li class="logged-out-only">
+                            <a href="login.html">Anmelden</a>
+                        </li>
+
+                        <li class="logged-out-only">
+                            <a href="register.html">Registrieren</a>
+                        </li>
+
+                        <li
+                            id="admin-dropdown-link"
+                            style="display: none;"
+                        >
+                            <a href="admin.html">
+                                Administration
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="konto.html">
+                                Mein Konto
+                            </a>
+                        </li>
+
+                        <li class="logged-in-only">
+                            <a href="#" id="logout-link">
+                                Abmelden
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+
+                <li id="cart-nav">
+                    <a href="warenkorb.html">Warenkorb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Zurück -->
+    <a
+        href="shop.html"
+        class="back-to-shop"
+        id="product-back-link"
+    >
+        <span>←</span> Zurück zum Shop
+    </a>
+
+
+    <!-- Fehler -->
+    <div
+        id="product-error-state"
+        class="product-error-state"
+        style="display: none;"
+    >
+
+        <h2 id="product-error-title">
+            Produkt nicht verfügbar
+        </h2>
+
+        <p id="product-error-message">
+            Das gewünschte Produkt konnte nicht geladen werden.
+        </p>
+
+        <a href="shop.html" class="btn-primary">
+            Zum Shop
+        </a>
+
+    </div>
+
+
+    <!-- Produkt -->
+    <section
+        id="Produktdetails"
+        class="section-p1"
+        data-product-content
+    >
+
+        <!-- Produktbilder -->
+        <div class="produktbild">
+
+            <img
+                id="product-image"
+                src=""
+                width="100%"
+                alt=""
+            >
+
+            <div
+                id="product-thumbnails"
+                class="product-thumbnails"
+            ></div>
+
+        </div>
+
+
+        <!-- Produktbeschreibung -->
+        <div class="Produktbeschr">
+
+            <h4 id="product-name"></h4>
+
+            <h2 id="product-price"></h2>
+
+            <p
+                id="product-stock"
+                class="product-stock"
+            ></p>
+
+
+            <input
+                type="number"
+                value="1"
+                min="1"
+                id="product-quantity"
+            >
+
+
+            <button id="add-to-cart">
+                Zum Warenkorb hinzufügen
+            </button>
+
+
+            <!-- Login -->
+            <a
+                href="login.html"
+                id="product-login-button"
+                class="btn-primary product-login-button"
+                style="display: none;"
+            >
+                Anmelden, um zum Warenkorb hinzuzufügen
+            </a>
+
+
+            <!-- Verfügbarkeit -->
+            <p
+                id="product-unavailable-message"
+                style="display: none;"
+            >
+                Momentan nicht verfügbar
+            </p>
+
+
+            <h4>Produktdetails</h4>
+
+            <span id="product-description"></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="section-p1 fuss">
+
+        <div class="col">
+
+            <h4 class="footer-title">
+                Kontakt
+            </h4>
+
+            <!-- KONFIGURATION: Unternehmensadresse vor Inbetriebnahme durch die tatsächliche Geschäftsadresse ersetzen -->
+            <p>
+                <strong>Adresse:</strong>
+                Musterstraße 12, 66111 Saarbrücken
+            </p>
+
+            <!-- KONFIGURATION: Telefonnummer vor Inbetriebnahme durch die tatsächliche geschäftliche Telefonnummer ersetzen -->
+            <p>
+                <strong>Telefon:</strong>
+                +49 123 12345
+            </p>
+
+            <!-- KONFIGURATION: Shopname und Jahresangabe an Betreiber und Betriebsjahr anpassen -->
+            <p>
+                © MusterShop, 2026
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a href="index.html">
+
+                <!-- KONFIGURATION: Pfad und Alternativtext an das verwendete Shop-Logo anpassen -->
+                <img
+                    src="img/fishlogo.png"
+                    class="logo footer-logo"
+                    alt="MusterShop Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- Rechtliches -->
+        <div class="col rechts">
+
+            <h4 class="footer-title">
+                Rechtliches
+            </h4>
+
+            <a href="contact.html#impressum">
+                Impressum
+            </a>
+
+            <a href="agb.html">
+                AGB
+            </a>
+
+            <a href="widerruf.html">
+                Widerrufsbelehrung
+            </a>
+
+            <a href="datenschutzrichtlinien.html">
+                Datenschutzerklärung
+            </a>
+
+            <a href="contact.html#hilfe">
+                Hilfe
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+
+</body>
+
+</html>
