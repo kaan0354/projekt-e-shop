@@ -19,10 +19,11 @@ Diese technische Dokumentation beschreibt die notwendigen Voraussetzungen sowie 
 - [Voraussetzungen](#voraussetzungen)
 - [Projektstruktur](#projektstruktur)
 - [Installation und Einrichtung](#installation-und-einrichtung)
-  - [1. Datenbank einrichten](#1-datenbank-einrichten)
-  - [2. Node.js und npm installieren](#2-nodejs-und-npm-installieren)
-  - [3. Umgebungsvariablen konfigurieren](#3-umgebungsvariablen-konfigurieren)
-  - [4. Abhängigkeiten installieren](#4-abhängigkeiten-installieren)
+  - [1. Projekt herunterladen](#1-projekt-herunterladen)
+  - [2. Datenbank einrichten](#2-datenbank-einrichten)
+  - [3. Node.js und npm installieren](#3-nodejs-und-npm-installieren)
+  - [4. Umgebungsvariablen konfigurieren](#4-umgebungsvariablen-konfigurieren)
+  - [5. Abhängigkeiten installieren](#5-abhängigkeiten-installieren)
 - [Konfiguration und Anpassung](#konfiguration-und-anpassung)
   - [Firmenlogo anpassen](#firmenlogo-anpassen)
   - [AGB und Widerrufsbelehrung anpassen](#agb-und-widerrufsbelehrung-anpassen)
@@ -97,7 +98,27 @@ Die Datei `README.md` im Hauptverzeichnis enthält die vorliegende technische Do
 
 ## Installation und Einrichtung
 
-### 1. Datenbank einrichten
+### 1. Projekt herunterladen
+
+Das Projekt wird über ein GitHub-Repository bereitgestellt und muss zunächst auf den lokalen Computer heruntergeladen werden.
+
+Hierfür kann das Projekt direkt über GitHub als ZIP-Datei heruntergeladen werden:
+
+1. Das bereitgestellte GitHub-Repository öffnen.
+2. Auf **Code** klicken.
+3. **Download ZIP** auswählen.
+4. Die heruntergeladene ZIP-Datei vollständig entpacken.
+5. Den entpackten Projektordner anschließend beispielsweise in Visual Studio Code öffnen.
+
+Alternativ kann das Repository bei installiertem Git über ein Terminal geklont werden:
+
+    git clone https://github.com/kaan0354/projekt-e-shop.git
+
+Anschließend kann der heruntergeladene bzw. geklonte Projektordner für die weitere Einrichtung verwendet werden.
+
+Die nachfolgenden Schritte beschreiben die vollständige lokale Einrichtung des Projekts.
+
+### 2. Datenbank einrichten
 
 Für den Betrieb des E-Shops wird eine MySQL-Datenbank benötigt. Die vollständige Datenbankstruktur wird bereits über die Datei `backend/database.sql` bereitgestellt.
 
@@ -179,7 +200,7 @@ Beispiel:
 
 > **Hinweis:** Die vorgegebene Tabellenstruktur sollte nicht ohne entsprechende Anpassungen des Backends verändert werden, da das Backend auf die definierten Tabellen, Spalten und Beziehungen zugreift.
 
-### 2. Node.js und npm installieren
+### 3. Node.js und npm installieren
 
 Für die Ausführung des Backends wird Node.js benötigt. Bei der Installation von Node.js wird gleichzeitig der Paketmanager npm installiert, über den anschließend die benötigten Abhängigkeiten des Projekts eingerichtet werden.
 
@@ -204,7 +225,7 @@ Falls `npm` nicht ausgeführt werden kann, kann stattdessen `npm.cmd` verwendet 
 
     npm.cmd --version
 
-### 3. Umgebungsvariablen konfigurieren
+### 4. Umgebungsvariablen konfigurieren
 
 Das Backend verwendet die Datei `backend/.env`, um wichtige Einstellungen und Zugangsdaten zu speichern. Dazu gehören die Verbindung zur MySQL-Datenbank, die lokalen Adressen von Frontend und Backend sowie die Zugangsdaten für den E-Mail-Versand und die PayPal-Zahlungsabwicklung.
 
@@ -353,7 +374,7 @@ Damit werden die PayPal-Anfragen nicht mehr an die Testumgebung, sondern an die 
 
 > **Wichtig:** Die `.env` kann sensible Zugangsdaten enthalten. MySQL-Passwörter, Session-Schlüssel, App-Passwörter und PayPal-Zugangsdaten sollten niemals veröffentlicht oder an Dritte weitergegeben werden. Die mit dem Projekt bereitgestellte `.env.vorlage` enthält daher keine persönlichen Zugangsdaten. Die daraus erstellte und individuell konfigurierte `.env` darf nicht veröffentlicht oder in das Git-Repository aufgenommen werden.
 
-### 4. Abhängigkeiten installieren
+### 5. Abhängigkeiten installieren
 
 Das Backend verwendet verschiedene Node.js-Pakete. Dazu gehören unter anderem Express für die Bereitstellung des Servers, MySQL2 für die Datenbankverbindung, Nodemailer für den E-Mail-Versand und bcrypt für die Verarbeitung von Passwörtern.
 
