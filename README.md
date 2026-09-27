@@ -417,6 +417,8 @@ Das im E-Shop verwendete Firmenlogo kann ohne Änderungen an den einzelnen HTML-
 
 Dazu muss das gewünschte Logo im Ordner `frontend/img` unter dem Dateinamen `fishlogo.png` abgelegt werden. Die bereits vorhandene Datei kann dabei durch das neue Logo ersetzt werden.
 
+Das verwendete Logo muss als echte PNG-Datei vorliegen. Eine JPG- oder JPEG-Datei sollte daher nicht lediglich durch Umbenennen der Dateiendung in `.png` geändert werden, da sich dadurch das tatsächliche Dateiformat nicht verändert. Falls das gewünschte Logo in einem anderen Bildformat vorliegt, sollte es zunächst in das PNG-Format konvertiert und anschließend unter dem Dateinamen `fishlogo.png` im Ordner `frontend/img` gespeichert werden.
+
     frontend/
     └── img/
         └── fishlogo.png
