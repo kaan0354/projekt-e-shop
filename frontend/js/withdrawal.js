@@ -30,13 +30,7 @@ if (withdrawalForm) {
 
             const orderNumber =
                 document.getElementById(
-                    'withdrawal-order-number'
-                ).value.trim();
-
-
-            const message =
-                document.getElementById(
-                    'withdrawal-message'
+                    'withdrawal-order'
                 ).value.trim();
 
 
@@ -104,8 +98,7 @@ if (withdrawalForm) {
                             body: JSON.stringify({
                                 fullName,
                                 email,
-                                orderNumber,
-                                message
+                                orderNumber
                             })
                         }
                     );
